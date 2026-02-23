@@ -17,6 +17,15 @@
     "i18n"
   ],
   "license": "MIT",
+  "author": "kudretyilmazz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kudretyilmazz/apostrofe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kudretyilmazz/apostrofe/issues"
+  },
+  "homepage": "https://github.com/kudretyilmazz/apostrofe#readme",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

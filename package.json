@@ -1,0 +1,67 @@
+{
+  "name": "apostrofe",
+  "version": "1.0.0",
+  "description": "Lightweight, type-safe Turkish apostrophe (kesme işareti) rules engine",
+  "keywords": [
+    "turkish",
+    "apostrophe",
+    "kesme",
+    "isareti",
+    "turkce",
+    "suffix",
+    "vowel-harmony",
+    "nlp",
+    "linguistics",
+    "grammar",
+    "proper-noun",
+    "i18n"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "size": "size-limit"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.0.0",
+    "size-limit": "^11.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "5 KB"
+    }
+  ]
+}
